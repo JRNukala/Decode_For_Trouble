@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LetterActivity">
+    <!-- Level TextView -->
+    <Button
+        android:id="@+id/backStart"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="BackStart"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="-10dp"
+        tools:layout_editor_absoluteY="352dp" />
+    <Button
+        android:id="@+id/backTrouble"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:text="BackTrouble"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp" />
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="?android:actionBarSize"
+        android:orientation="horizontal"
+        android:background="#2196F3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <!-- Left Side: Level and Slider -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <!-- Level TextView -->
+        <TextView
+            android:id="@+id/levelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Level:"
+            android:textColor="#FFFFFF"
+        android:padding="8dp"/>
+
+        <!-- Level SeekBar/Slider -->
+        <SeekBar
+            android:id="@+id/levelSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="9"
+        android:padding="8dp"/>
+
+    </LinearLayout>
+
+    <!-- Right Side: Time TextView -->
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time:"
+        android:textColor="#FFFFFF"
+        android:padding="8dp"/>
+
+</LinearLayout>
+    <edu.ncssm.nukala24j.decodefortrouble.GameView
+        android:id="@+id/gameView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".LetterActivity" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
